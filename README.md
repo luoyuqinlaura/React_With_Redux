@@ -6,7 +6,7 @@ This is the record for my learning journy of Udemy class "Modern React with Redu
 
 ## aim: finish a traslation app
 
-Link:https://codesandbox.io/s/react-forked-584jmr?file=/src/App.js
+Link: https://codesandbox.io/s/react-forked-584jmr?file=/src/App.js
 
 - what is react all about?
   (1)display html
@@ -44,18 +44,83 @@ Text input+ selected language ====> translate component(network request with the
 
   change into project folder
 
-  run **npm start**
+  run `npm start`
 
 这个流程，建立一个 react app 意味着什么？files in our project(app.js, index.js... ) these are not understandable by browser. 所以我们有 dev server 去帮我们把 jsx 转换成 js，用两个工具 Babel(turn jsx to normal js) & Webpack(merge all projects files into a single file: bundle.js)
 
 # 2. Creating Content with JSX!
 
 - five steps of creating conponent and shows on screen (index.js)
-- <h1>Hi there!</h1> this doesnt make anything show up in the browser. This creats an instruciton for React telling it to make an element. we have to return it from a component for React to use it.
+-
 
-* we can create JS variable and reder it inside JSX with {}
+```
+Hi there!
+```
+
+this doesnt make anything show up in the browser. This creats an instruciton for React telling it to make an element. we have to return it from a component for React to use it.
+
+- we can create JS variable and reder it inside JSX with {}
   (but react dont know how to render a boolean variable, it will show nothing)
   (Object are not valid JSX children, you can not render an Object in JSx, it will pop up error)
-  (const message = [1,2,3], return <h1>{message}</h1>) // result is 123
 
-* props is like attributes in html
+  ```
+  const message = [1,2,3], return {<h1>message</h1>} // result is 123
+  ```
+
+- props is like attributes in html
+  Props:
+  Can refer to variable with { }
+
+Also props don’t have to be defined as variables
+
+```
+function App() {
+  Const message = “Hi”;
+   Return  (
+      <input
+          type = “number” ————String with “”
+          min = {5} ————— number with {}
+          List = {[1,2,3]} ——— Arrays
+          Style = {{ color:’red’}} ———— objects with {}
+          Alt = {message} ——— refer to message variable with {}
+```
+
+- Converting html to jsx
+
+1. Camal Case
+2. Number has to be {}
+3. Boolean, for true, it can just the Boolean variable name, for false, it must be {}
+4. When we want to add the css with className style props instead of class
+5. In-line styles are provided as objects
+
+- Module systems(import/export system)
+  我们想要共享很多 file 以及里面的变量，如果没有 module system，我们是不能默认做到的。所以我们需要 import 和 export 去做到，然后 module system 制定了一些规则
+
+1. export 有两种：default&named；A file can only have one default export
+
+2. Import process behind the scene:
+   (1) Declare a variable called App
+   (2) Find the default export from App.js file
+   (3) Assign the default export to the variable
+   attension: Default exports can be renamed in the import file, however, named exports cannot be renamed!!!
+
+3. Named export rules:
+
+4. Use when exporting multiple variables
+
+   ```
+   function App(){
+     return <h2>hi</h2>
+   }
+   const messsage=‘hi’
+   export { message }
+   export default App
+   ```
+
+   ```
+   import App, { message } from './App'
+   // './'or'../' means we are importing a file that we created
+   // import 'React' from 'react', without './'or'../' means we are importing a package
+   ```
+
+   5. './' vs '../'
