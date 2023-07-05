@@ -154,3 +154,11 @@ when we use the image always should shown in the project, we need to import it l
 
 2. introducing the event system
    two systems of react: event system(detect user behaviour) and state system(update content on screen)
+
+3. Events in detail
+   (1) What event you want?
+   (2) Create a function, usually an event handler or callback function
+   (3) Name the function using pattern of : handle + EventName, eg:handleClick/ handleMouseUp
+   (4) Pass the funciton as a prop
+   (5) Make sure you pass the function using a valid event name
+   (6) Make sure you pass a reference to the function(dont call it!!!)
