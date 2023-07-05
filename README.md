@@ -151,3 +151,6 @@ when we use the image always should shown in the project, we need to import it l
 
 1. app overview:
    now we want to make our app interactive. we can add animal picture when we click on add animal button and every time we click on the image, the heart of the image will get bigger.
+
+2. introducing the event system
+   two systems of react: event system(detect user behaviour) and state system(update content on screen)
