@@ -146,3 +146,8 @@ when we use the image always should shown in the project, we need to import it l
 
   4.review how css works
   bulma.io this is a css library, free styling. In professional project, we can use other's css file(library) or write costum css code. The most common way of using library is using npm install library and import that library in app.js.
+
+# 4. State: how show content that is going to change all the time
+
+1. app overview:
+   now we want to make our app interactive. we can add animal picture when we click on add animal button and every time we click on the image, the heart of the image will get bigger.
