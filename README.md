@@ -123,4 +123,26 @@ function App() {
    // import 'React' from 'react', without './'or'../' means we are importing a package
    ```
 
-   5. './' vs '../'
+5. './' vs '../'
+
+# 3. Building reusable components
+
+1. project overview!
+   building a project showing personal digital assistant
+   Components hierachy: App has 3 ProfileCards
+2. Steps:
+   (1) creating core components: ProfileCard.js creates a component that will show single card; App.js creates a component that shows 3 copies of ProfileCard; index.js shows the App component on the screen.
+   (2) making each profile looks different
+
+- props system
+  pass data from a parent ot a child. allows a parent to configure each child differently(show different content, etc). one way flow data, child cant push props back up. like 25% of understanding React.
+
+<img src="">
+
+3.images for the app
+when we use the image always should shown in the project, we need to import it like a JS file, but notice we need 后缀. For other images, for example from api or website, we dont need import them.
+
+- whenever we add image tag, we need alt prop
+
+  4.review how css works
+  bulma.io this is a css library, free styling. In professional project, we can use other's css file(library) or write costum css code. The most common way of using library is using npm install library and import that library in app.js.
