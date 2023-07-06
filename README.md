@@ -177,3 +177,8 @@ when we use the image always should shown in the project, we need to import it l
 ```
 
 - callback can be write down in one line
+
+5. Exercise
+6. Introducing the State System(update content on screen, also called rerender)
+   State is for updating the content on screen. Event is catching the user behaviour.
+   (see code, right now, we can update the number of animals whenever we click the button)
