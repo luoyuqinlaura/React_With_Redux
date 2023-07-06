@@ -161,4 +161,19 @@ when we use the image always should shown in the project, we need to import it l
    (3) Name the function using pattern of : handle + EventName, eg:handleClick/ handleMouseUp
    (4) Pass the funciton as a prop
    (5) Make sure you pass the function using a valid event name
-   (6) Make sure you pass a reference to the function(dont call it!!!)
+   (6) Make sure you pass a reference to the function(dont call it!!!), so we can call it in the future.
+
+4. variations on Event handler
+
+- what's the difference between two console.log:
+
+```
+ const greeting = () => {
+  return 'hi there'
+ };
+
+ console.log( greeting ); // Log the 'greeting' funciton itself. Does not call it.
+ console.log( greeting() ); // Immediately call the function and log the return result.
+```
+
+- callback can be write down in one line
