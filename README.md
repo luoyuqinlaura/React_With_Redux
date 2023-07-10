@@ -185,3 +185,10 @@ when we use the image always should shown in the project, we need to import it l
 7. More on State
    <img src="images/46.1.jpeg">
    <img src="images/46.2.jpeg">
+
+8. Understanding the Re-rendering process
+   after updating a piece of state, it is rerender time.
+   、、、
+   const [count, setCount] = useState(0);
+   、、、
+   when setCount(num) is called, the count will be changed to the num number and react will rerender the whole component.
