@@ -192,3 +192,6 @@ when we use the image always should shown in the project, we need to import it l
    const [count, setCount] = useState(0);
    、、、
    when setCount(num) is called, the count will be changed to the num number and react will rerender the whole component.
+
+9. Why array destructuring?
+   详细解释，上面小标题 8 的代码怎么来的。
