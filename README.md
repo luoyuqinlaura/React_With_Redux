@@ -195,3 +195,10 @@ when we use the image always should shown in the project, we need to import it l
 
 9. Why array destructuring?
    详细解释，上面小标题 8 的代码怎么来的。
+
+10. Finish this App
+
+- map function is a built in function, when you called it. it gets every element from an array and puts it into a transform function and outout an array with changed element in the same order.
+  <img src="">
+
+- Loading and showing SVGs

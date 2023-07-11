@@ -1,16 +1,30 @@
+import './App.css';
 import { useState } from 'react';
+import AnimalShow from './AnimalShow';
+
+function getRandomAnimal() {
+  const animals = ['bird', 'cat', 'cow', 'dog', 'gator', 'horse'];
+
+  return animals[Math.floor(Math.random() * animals.length)];
+}
 
 function App() {
-  const [count, setCount] = useState(0);
+  // initially create an empty animal array
+  const [animals, setAnimals] = useState([]);
 
   const handleClick = () => {
-    setCount(count + 1);
+    // we have to use setter method to change state instead of 赋值
+    setAnimals([...animals, getRandomAnimal()]);
   };
 
+  const renderAnimals = animals.map((animals, index) => {
+    return <AnimalShow type={animals} key={index} />;
+  });
+
   return (
-    <div>
+    <div className="app">
       <button onClick={handleClick}>Add animal!</button>
-      <div>Number of animals: {count}</div>
+      <div className="animal-list">{renderAnimals}</div>
     </div>
   );
 }
