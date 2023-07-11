@@ -199,6 +199,6 @@ when we use the image always should shown in the project, we need to import it l
 10. Finish this App
 
 - map function is a built in function, when you called it. it gets every element from an array and puts it into a transform function and outout an array with changed element in the same order.
-  <img src="50.1.jpeg">
+  <img src="images/50.1.jpeg">
 
-<img src="4.app.gif">
+<img src="images/4.app.gif">
