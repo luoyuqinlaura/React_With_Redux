@@ -204,3 +204,37 @@ when we use the image always should shown in the project, we need to import it l
 <img src="images/4.app.gif">
 
 # 5. Using api with react
+
+Write an app for searching a specific word and getting responding pictures.
+we will using free api and understand how to fetch data without using React, since React only takes care what to show on the screen instead of business logic.
+
+1. program setup
+2. HTTP request overview
+   <img src="">
+
+http status code
+<img src="">
+
+- what we should care : time
+
+3. understanding the api
+   sign up -> create an app to get an access key -> take a look at docs to understand the request we will make
+
+access key is what we have to include with every request to the api 4. make an http request
+React itself has no tools for making HTTP request, so to make request, we commonly use Axios.
+we need to "npm install axios"
+
+7. thinking about data flow
+   finish the api, we back to the react part.
+
+<img src="images/67.1.jpeg"> <img src="images/67.2.jpeg"> <img src="">
+
+Apperently, we need the term from the searchBar, and put the result into imageList. However, when to use the searchImage method is a question.
+重要‼️ 的点在于，sibling components 之间不能传输数据，所以我们调用了 searchImage 方法（按照逻辑是在 user 点击 enter 搜索）时，我们要将 searchBar component 里面的传到 parent component（此处是 App），然后将 parent 里得到的 images result，通过 props system 传给 child component（imageList）。
+<img src="images/67.3.jpeg">
+
+8. child to parent communication
+   !!!!复习
+
+9. implementing part 8
+   <img src="images/67.4.jpeg">
